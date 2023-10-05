@@ -23,6 +23,7 @@
 
   <div class="row">
     <Greet />
+    <helloworld />
   </div>
 
 </main>

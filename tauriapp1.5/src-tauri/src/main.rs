@@ -7,6 +7,12 @@ fn greet(name: &str) -> String {
     format!("Hello, {}! You've been greeted from Rust!", name)
 }
 
+#[tauri::command]
+//Tauri command to call the helloworld function
+fn helloworld() -> String {
+    format!("Hello Rust!")
+}
+
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet])
